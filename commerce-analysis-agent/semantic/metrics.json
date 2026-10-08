@@ -1,0 +1,50 @@
+[
+  {
+    "name": "GMV",
+    "version": "v1.0",
+    "definition": "支付成功订单的实付金额合计，按支付时间，含退款",
+    "note": "SUM(pay_amount)，status = paid"
+  },
+  {
+    "name": "订单量",
+    "version": "v1.0",
+    "definition": "与 GMV 使用同一套支付状态过滤后的订单数",
+    "note": "COUNT(*)"
+  },
+  {
+    "name": "支付买家数",
+    "version": "v1.0",
+    "definition": "支付成功订单的去重用户数",
+    "note": "COUNT(DISTINCT user_id)"
+  },
+  {
+    "name": "转化率",
+    "version": "v1.0",
+    "definition": "访问转化是支付买家数除以访问 UV；下单转化是支付订单数除以下单订单数",
+    "note": "两套口径必须分开命名"
+  },
+  {
+    "name": "客单价",
+    "version": "v1.0",
+    "definition": "与当前 GMV 开关一致的金额除以支付买家数",
+    "note": "GMV / 支付买家数"
+  },
+  {
+    "name": "退款金额",
+    "version": "v1.0",
+    "definition": "订单明细中的退款金额合计",
+    "note": "SUM(refund_amount)"
+  },
+  {
+    "name": "退款率",
+    "version": "v1.0",
+    "definition": "退款金额除以同期支付成功实付金额",
+    "note": "退款金额 / GMV"
+  },
+  {
+    "name": "复购率",
+    "version": "v1.0",
+    "definition": "自然月内购买不少于 2 次的用户数除以同期购买用户数",
+    "note": "默认自然月"
+  }
+]

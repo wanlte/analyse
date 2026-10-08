@@ -1,0 +1,7 @@
+[
+  {
+    "metric": "GMV",
+    "tables": ["ads_trade_daily", "dwd_order_detail"],
+    "sources": ["ods_orders"]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {"id": 1, "direction": "看大盘", "question": "查数：本月 GMV 是多少"},
+  {"id": 2, "direction": "看大盘", "question": "查数：支付成功的订单量是多少"},
+  {"id": 3, "direction": "看大盘", "question": "查数：客单价大概是多少"},
+  {"id": 4, "direction": "看大盘", "question": "查数：支付买家有多少"},
+  {"id": 5, "direction": "看大盘", "question": "查数：含退款的 GMV"},
+  {"id": 6, "direction": "看大盘", "question": "查数：退款金额是多少"},
+  {"id": 7, "direction": "看趋势", "question": "查数：GMV 按支付时间怎么变"},
+  {"id": 8, "direction": "看趋势", "question": "查数：最近订单量的变化"},
+  {"id": 9, "direction": "看大盘", "question": "归因：这个月 GMV 的环比是多少"},
+  {"id": 10, "direction": "看大盘", "question": "归因：和去年同期比怎么样"},
+  {"id": 11, "direction": "看趋势", "question": "归因：哪一个渠道贡献最大"},
+  {"id": 12, "direction": "看大盘", "question": "归因：自营对 GMV 的贡献"},
+  {"id": 13, "direction": "看趋势", "question": "归因：直播渠道拉高了多少"},
+  {"id": 14, "direction": "看结构", "question": "对比：各渠道 GMV 占比"},
+  {"id": 15, "direction": "看结构", "question": "对比：自营和直播谁更高"},
+  {"id": 16, "direction": "看结构", "question": "对比：第三方占比"},
+  {"id": 17, "direction": "找异常", "question": "对比：哪个渠道偏离最大"},
+  {"id": 18, "direction": "看趋势", "question": "对比：十月和九月的 GMV"},
+  {"id": 19, "direction": "看大盘", "question": "对比：今年十月和去年十月"},
+  {"id": 20, "direction": "找异常", "question": "归因：异常渠道对环比的影响"}
+]

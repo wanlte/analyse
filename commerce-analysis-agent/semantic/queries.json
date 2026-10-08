@@ -1,0 +1,10 @@
+{
+  "period": "SELECT substr(CAST(pay_time AS VARCHAR), 1, 7) AS period, SUM(pay_amount) AS gmv FROM ods_orders WHERE status = 'paid' GROUP BY 1 ORDER BY 1",
+  "period_week": "SELECT strftime(CAST(pay_time AS TIMESTAMP), '%Y-W%W') AS period, SUM(pay_amount) AS gmv FROM ods_orders WHERE status = 'paid' GROUP BY 1 ORDER BY 1",
+  "period_quarter": "SELECT substr(CAST(pay_time AS VARCHAR), 1, 4) || '-Q' || CAST(((CAST(substr(CAST(pay_time AS VARCHAR), 6, 2) AS INTEGER) - 1) // 3 + 1) AS VARCHAR) AS period, SUM(pay_amount) AS gmv FROM ods_orders WHERE status = 'paid' GROUP BY 1 ORDER BY 1",
+  "channel": "SELECT channel, SUM(pay_amount) AS gmv FROM ods_orders WHERE status = 'paid' GROUP BY 1",
+  "product": "SELECT product_id, SUM(quantity * unit_price) AS gmv FROM ods_order_items GROUP BY 1",
+  "gmv_gross": "SELECT SUM(pay_amount) AS gmv FROM ods_orders WHERE status = 'paid'",
+  "gmv_net": "SELECT (SELECT COALESCE(SUM(pay_amount), 0) FROM ods_orders WHERE status = 'paid') - (SELECT COALESCE(SUM(refund_amount), 0) FROM ods_order_items) AS gmv",
+  "data_date": "SELECT MAX(substr(CAST(pay_time AS VARCHAR), 1, 10)) AS data_date FROM ods_orders"
+}

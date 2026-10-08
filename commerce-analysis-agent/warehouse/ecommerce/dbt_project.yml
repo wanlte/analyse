@@ -1,0 +1,12 @@
+name: ecommerce
+profile: ecommerce
+model-paths: ["."]
+test-paths: ["tests"]
+models:
+  ecommerce:
+    dwd:
+      +materialized: table
+    dws:
+      +materialized: table
+    ads:
+      +materialized: table
